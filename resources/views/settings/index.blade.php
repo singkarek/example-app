@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('isi')
-    <div>Halo, {{ auth()->user()->name }}</div>
+    <h1>Kok ngatur?</h1>
 @endsection
