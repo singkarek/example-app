@@ -1,8 +1,6 @@
 @extends('layouts.main')
 
 @section('isi')
-
-    <body>
         <h1 class="text-3xl font-semibold text-center">{{ $title }}</h1>
         <div class="grid grid-rows-none justify-items-center">
             <div class="columns-md">
@@ -115,8 +113,7 @@
         @else
             <p class="text-center text-2xl">No posts yet.</p>
         @endif
-        <div class="mt-2">
+        <div class="mt-2 mb-2">
             {{ $posts->links() }}
         </div>
-    </body>
 @endsection
