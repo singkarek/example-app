@@ -38,7 +38,6 @@ class PostController extends Controller
     {
         return view('post', [
             "title" => "Post",
-            "active" => "blog",
             "posts" => $post
         ]);
     }
