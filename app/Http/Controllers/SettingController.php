@@ -8,7 +8,6 @@ class SettingController extends Controller
 {
     public function index(){
         return view('settings.index', [
-            'active' => 'settings',
             'title' => 'Settings'
         ]);
     }

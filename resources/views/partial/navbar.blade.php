@@ -72,7 +72,7 @@
                 </div>
             @else
                 <a href="\login"
-                    class="flex {{ $active === 'login' ? 'ring-4 ring-red-300 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' : 'hover:ring-4 hover:ring-red-300 text-gray-800 dark:text-white hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px2 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800' }}">
+                    class="flex [&.active]:ring-red-300 [&.active]:text-white [&.active]:bg-red-700 [&.active]:hover:bg-red-800 [&.active]:focus:ring-4 [&.active]:focus:ring-red-300 [&.active]:font-medium [&.active]:rounded-lg [&.active]:text-sm px-2 [&.active]:py-2 [&.active]:md:px-5 [&.active]:md:py-2.5 [&.active]:mr-1 [&.active]:md:mr-2 [&.active]:dark:bg-blue-600 [&.active]:dark:hover:bg-blue-700 [&.active]:focus:outline-none [&.active]:dark:focus:ring-blue-800 hover:ring-4 hover:ring-red-300 text-gray-800 dark:text-white hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px2 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 {{ Request::is('login') ? 'active' : '' }}">
                     <svg class="w-5 h-auto my-auto mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -82,7 +82,7 @@
                     Sign In
                 </a>
                 <a href="\register"
-                    class="flex {{ $active === 'register' ? 'ring-4 ring-red-300 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' : 'hover:ring-4 hover:ring-red-300 text-gray-800 dark:text-white hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px2 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800' }}">
+                    class="flex [&.active]:ring-red-300 [&.active]:text-white [&.active]:bg-red-700 [&.active]:hover:bg-red-800 [&.active]:focus:ring-4 [&.active]:focus:ring-red-300 [&.active]:font-medium [&.active]:rounded-lg [&.active]:text-sm px-2 [&.active]:py-2 [&.active]:md:px-5 [&.active]:md:py-2.5 [&.active]:mr-1 [&.active]:md:mr-2 [&.active]:dark:bg-blue-600 [&.active]:dark:hover:bg-blue-700 [&.active]:focus:outline-none [&.active]:dark:focus:ring-blue-800 hover:ring-4 hover:ring-red-300 text-gray-800 dark:text-white hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px2 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 {{ Request::is('register') ? 'active' : '' }}">
                     <svg class="w-5 h-auto my-auto mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -107,16 +107,16 @@
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <a href="\home"
-                        class="block py-2 pl-3 pr-4 {{ $active === 'home' ? 'text-red-600' : 'text-gray-900' }} border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                        class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700  [&.active]:text-red-600 {{ Request::is('home') ? 'active' : '' }}"
                         aria-current="page">Home</a>
                 </li>
                 <li>
                     <a href="\blog"
-                        class="block py-2 pl-3 pr-4 {{ $active === 'blog' ? 'text-red-600' : 'text-gray-900' }} border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+                        class="block py-2 pl-3 pr-4 [&.active]:text-red-600 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 {{ Request::is('blog') ? 'active' : '' }}">Blog</a>
                 </li>
                 <li>
                     <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium {{ $active === 'categories' ? 'text-red-600' : 'text-gray-900' }} border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium [&.active]:text-red-600 text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 {{ Request::is('categories') ? 'active' : '' }}">
                         <a href="/categories">Category</a> <svg aria-hidden="true" class="w-5 h-5 ml-1"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -146,11 +146,11 @@
                 </li>
                 <li>
                     <a href="\about"
-                        class="block py-2 pl-3 pr-4 {{ $active === 'about' ? 'text-red-600' : 'text-gray-900' }} border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                        class="block py-2 pl-3 pr-4 [&.active]:text-red-600 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 {{ Request::is('about') ? 'active' : '' }}">About</a>
                 </li>
                 <li>
                     <a href="\contact"
-                        class="block py-2 pl-3 pr-4 {{ $active === 'contact' ? 'text-red-600' : 'text-gray-900' }} border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        class="block py-2 pl-3 pr-4 [&.active]:text-red-600 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 {{ Request::is('contact') ? 'active' : '' }}">Contact</a>
                 </li>
             </ul>
         </div>
