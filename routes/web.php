@@ -27,8 +27,7 @@ Route::get('/', function () {
 });
 Route::get('/home', function () {
     return view('home', [
-        "title" => "Home",
-        "active" => "home"
+        "title" => "Home"
     ]);
 });
 Route::get('/about', function () {
@@ -36,8 +35,7 @@ Route::get('/about', function () {
         "title" => "About",
         "name" => "Fatsha Gaghana Jamel Ichsan",
         "email" => "jamel@gmail.com",
-        "image" => "joko.jpg",
-        "active" => "about"
+        "image" => "joko.jpg"
     ]);
 });
 
@@ -49,28 +47,24 @@ Route::get('/test', function () {
 Route::get('/contact', function () {
     return view('contact', [
         'title' => 'Contact',
-        "active" => "contact"
     ]);
 });
 Route::get('/category/{category:slug}', function (Category $category) {
     return view('blog', [
         'title' => "Post by Category : $category->name",
-        'posts' => $category->posts->load('category', 'user'),
-        "active" => "category", //tabel category dengan post_id
+        'posts' => $category->posts->load('category', 'user')
     ]);
 });
 Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Categories',
-        "active" => "categories",
         'categories' => Category::all()
     ]);
 });
 Route::get('/authors/{user:username}', function (User $user) {
     return view('blog', [
         'title' => "Post by Author : $user->name",
-        'posts' => $user->post->load('category', 'user'),
-        'active' => "blog"
+        'posts' => $user->post->load('category', 'user')
     ]);
 });
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
