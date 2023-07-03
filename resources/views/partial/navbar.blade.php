@@ -1,6 +1,6 @@
 <nav class="fixed top-0 z-40 w-screen bg-red-50 border-gray-200 dark:bg-gray-900">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <a href="/home" class="flex items-center">
+        <a href="/home" class="flex items-center md:ml-7">
             <img src="/img/logo.png" class="h-8 mr-1" alt="UrWeb Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">UrWeb</span>
         </a>

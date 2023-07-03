@@ -68,7 +68,7 @@
             </div>
 
 
-            <div class="container">
+            <div class="container mx-auto">
                 <div class="grid grid-rows-none justify-items-center">
                     <div class="grid grid-cols-3">
                         @foreach ($posts->skip(1) as $post)
