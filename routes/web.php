@@ -79,5 +79,5 @@ Route::get('/dashboard', function(){
         'title' => 'Dashboard'
     ]);
 })->middleware('auth');
-Route::resource('posts', DashboardPostController::class)->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 

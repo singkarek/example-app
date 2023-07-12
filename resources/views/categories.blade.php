@@ -7,10 +7,10 @@
             @foreach ($categories as $category)
                 <figure class="max-w-sm mr-4 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
                     <a href="/blog?category={{ $category->slug }}">
-                        <img class="rounded-t-lg" src="https://source.unsplash.com/400x400/?{{ $category->name }}"
+                        <img class="rounded-lg" src="https://source.unsplash.com/400x400/?{{ $category->name }}"
                             alt="{{ $category->name }}">
                     </a>
-                    <figcaption class="px-4 text-lg text-white bottom-6 bg-red-800/75 rounded-b-lg">
+                    <figcaption class="relative px-4 text-lg text-white bottom-10 bg-red-800/75">
                         <p>{{ $category->name }}</p>
                     </figcaption>
                 </figure>
