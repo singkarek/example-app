@@ -23,7 +23,9 @@ use GuzzleHttp\Middleware;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 Route::get('/home', function () {
     return view('home', [
