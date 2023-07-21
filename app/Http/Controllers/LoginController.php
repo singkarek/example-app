@@ -22,6 +22,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
+            // if(auth()->user()->username == 'fireflies14'){}
             return redirect()->intended('/dashboard');
         }
 
