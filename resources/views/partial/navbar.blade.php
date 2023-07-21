@@ -7,21 +7,19 @@
         <div class="flex flex-wrap items-center md:order-2">
             <a href="\login"
                 class="flex [&.active]:ring-red-300 [&.active]:text-white [&.active]:bg-red-700 [&.active]:hover:bg-red-800 [&.active]:focus:ring-4 [&.active]:focus:ring-red-300 [&.active]:font-medium [&.active]:rounded-lg [&.active]:text-sm px-2 [&.active]:py-2 [&.active]:md:px-5 [&.active]:md:py-2.5 [&.active]:mr-1 [&.active]:md:mr-2 [&.active]:dark:bg-blue-600 [&.active]:dark:hover:bg-blue-700 [&.active]:focus:outline-none [&.active]:dark:focus:ring-blue-800 hover:ring-4 hover:ring-red-300 text-gray-800 dark:text-white hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 {{ Request::is('login') ? 'active' : '' }}">
-                <svg class="w-5 h-auto my-auto mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="w-4 h-4 my-auto mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    stroke="currentColor" stroke-width="1.5" viewBox="0 0 18 15">
                     <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75">
-                    </path>
+                        d="M1 7.5h11m0 0L8 3.786M12 7.5l-4 3.714M12 1h3c.53 0 1.04.196 1.414.544.375.348.586.82.586 1.313v9.286c0 .492-.21.965-.586 1.313A2.081 2.081 0 0 1 15 14h-3" />
                 </svg>
                 Sign In
             </a>
             <a href="\register"
                 class="flex [&.active]:ring-red-300 [&.active]:text-white [&.active]:bg-red-700 [&.active]:hover:bg-red-800 [&.active]:focus:ring-4 [&.active]:focus:ring-red-300 [&.active]:font-medium [&.active]:rounded-lg [&.active]:text-sm px-2 [&.active]:py-2 [&.active]:md:px-5 [&.active]:md:py-2.5 [&.active]:mr-1 [&.active]:md:mr-2 [&.active]:dark:bg-blue-600 [&.active]:dark:hover:bg-blue-700 [&.active]:focus:outline-none [&.active]:dark:focus:ring-blue-800 hover:ring-4 hover:ring-red-300 text-gray-800 dark:text-white hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 {{ Request::is('register') ? 'active' : '' }}">
-                <svg class="w-5 h-auto my-auto mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z">
-                    </path>
+                <svg class="w-4 h-4 my-auto mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 20 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M13 8h6m-3 3V5m-6-.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0ZM5 11h3a4 4 0 0 1 4 4v2H1v-2a4 4 0 0 1 4-4Z" />
                 </svg>
                 Sign up
             </a>
@@ -51,7 +49,7 @@
                 <li>
                     <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
                         class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium [&.active]:text-red-600 text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 {{ Request::is('categories') ? 'active' : '' }}">
-                        <a href="/categories">Category</a> <svg aria-hidden="true" class="w-5 h-5 ml-1"
+                        <a href="/categories">Category</a> <svg aria-hidden="true" class="w-5 h-5 mt-1"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -63,15 +61,21 @@
                         <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
                             <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
                                 <li>
-                                    <a href="#"
+                                    <a href="/blog?category=nature"
                                         class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-blue-500">
-                                        About Us
+                                        Nature
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/blog?category=personal"
                                         class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-blue-500">
-                                        Library
+                                        Personal
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/blog?category=web-programmer"
+                                        class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-blue-500">
+                                        Web Programmer
                                     </a>
                                 </li>
                             </ul>
