@@ -14,6 +14,9 @@
                             <th scope="col" class="px-6 py-3">
                                 Serial Number
                             </th>
+                            {{-- <th scope="col" class="px-6 py-3">
+                                Versi Modem
+                            </th> --}}
                             <th scope="col" class="px-6 py-3">
                                 Action
                             </th>
@@ -25,8 +28,11 @@
                                 1
                             </td>
                             <td class="px-6 py-4">
-                                <input type="text" class="px-2.5 text-sm" name="sn" placeholder="input sn" id="input">
+                                <input type="text" class="px-2.5 text-sm" name="sn" placeholder="input sn" id="input" autofocus>
                             </td>
+                            {{-- <td class="px-6 py-4">
+                                <input type="text" class="px-2.5 text-sm" name="sn" placeholder="type" id="input">
+                            </td> --}}
                             {{-- <td class="px-6 py-4">
                                 <button type="submit">+</button>
                             </td> --}}
@@ -68,7 +74,7 @@
                         ${i}
                     </td>
                     <td class="px-6 py-4">
-                        <input type="text" class="px-2.5 text-sm" name="sn${i}" placeholder="input sn">
+                        <input type="text" class="px-2.5 text-sm" name="sn${i}" placeholder="input sn" id="inputsn">
                     </td>
                     <td class="px-6 py-4">
                         <button class="btn_remove bg-red-500 px-2 rounded" id="${i}" type="button">-</button>
@@ -76,7 +82,7 @@
                 </tr>
             `;
                 $("#dynamic-table").append(newRow);
-                $("#dynamic-table tr:last-child input").focus();
+                $("#dynamic-table tr:last-child #inputsn").focus();
             }
 
             $(document).on('click', '.btn_remove', function() {
