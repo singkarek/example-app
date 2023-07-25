@@ -21,6 +21,19 @@
                 width: 80%;
             }
         }
+        @media (max-height: 500px){
+            .flex {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: screen;
+            }
+
+            .w-s {
+                height: 80%;
+                width: 80%;
+            }
+        }
     </style>
 </head>
 
@@ -28,9 +41,9 @@
     <div class="flex h-screen w-screen justify-center items-center bg-no-repeat bg-center bg-cover"
         style="background-image: url('/img/bg5.png');">
         <div
-            class="flex columns-1 w-96 h-auto bg-black border border-indigo-500 bg-opacity-10 rounded-3xl backdrop-blur-xl items-center">
-            <div class="w-96 mx-12 my-8">
-                <div class="flex justify-center">
+            class="flex columns-1 w-96 bg-black border border-indigo-500 bg-opacity-10 rounded-3xl backdrop-blur-xl items-center">
+            <div class="w-s w-96 hs mx-12 my-8">
+                <div class="flex justify-center items-center">
                     <img src="/img/logo-white.png" alt="Logo" class="w-48">
                 </div>
                 <h2 class="block text-white font-sans font-semibold text-2xl mt-4">Login</h2>
@@ -51,7 +64,7 @@
                                 placeholder="Password" required>
                         </div>
                         <button type="submit"
-                            class="text-white font-bold bg-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none rounded-lg text-sm w-full px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Sign
+                            class="text-white font-bold bg-blue-900 hover:bg-blue-500 focus:ring-4 focus:outline-none rounded-lg text-sm w-full px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Sign
                             in</button>
                     </div>
                 </form>
