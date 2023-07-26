@@ -23,15 +23,14 @@
         }
         @media (max-height: 500px){
             .flex {
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 width: screen;
             }
 
-            .w-s {
+            .h-auto {
                 height: 80%;
-                width: 80%;
             }
         }
     </style>
@@ -41,8 +40,8 @@
     <div class="flex h-screen w-screen justify-center items-center bg-no-repeat bg-center bg-cover"
         style="background-image: url('/img/bg5.png');">
         <div
-            class="flex columns-1 w-96 bg-black border border-indigo-500 bg-opacity-10 rounded-3xl backdrop-blur-xl items-center">
-            <div class="w-s w-96 hs mx-12 my-8">
+            class="flex columns-1 w-96 h-auto bg-black border border-indigo-500 bg-opacity-10 rounded-3xl backdrop-blur-xl items-center">
+            <div class="w-s w-96 h-auto mx-12 my-8 overflow-auto">
                 <div class="flex justify-center items-center">
                     <img src="/img/logo-white.png" alt="Logo" class="w-48">
                 </div>
@@ -54,7 +53,7 @@
                                 class="block text-sm mb-1 font-light font-sans leading-none text-white dark:text-white">User</label>
                             <input type="email" name="email" id="email" value="{{ old('email') }}"
                                 class="bg-slate-50 border border-gray-300 text-grey-900 text-sm rounded-lg focus:ring-darkBlue focus:border-darkBlue block w-full px-4 py-2 dark:bg-red-700 dark:border-red-600 dark:placeholder-red-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
-                                placeholder="username@gmail.com" required autocomplete="off">
+                                placeholder="username@gmail.com" required autocomplete="off" autofocus>
                         </div>
                         <div class="mb-6">
                             <label for="password"
@@ -64,7 +63,7 @@
                                 placeholder="Password" required>
                         </div>
                         <button type="submit"
-                            class="text-white font-bold bg-blue-900 hover:bg-blue-500 focus:ring-4 focus:outline-none rounded-lg text-sm w-full px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Sign
+                            class="text-white font-bold bg-dasarataDarkBlue hover:bg-dasarataDarkBlue2 focus:ring-4 focus:outline-none rounded-lg text-sm w-full px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Sign
                             in</button>
                     </div>
                 </form>
