@@ -23,15 +23,14 @@
         }
         @media (max-height: 500px){
             .flex {
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 width: screen;
             }
 
-            .w-s {
+            .h-auto {
                 height: 80%;
-                width: 80%;
             }
         }
     </style>
@@ -41,8 +40,8 @@
     <div class="flex h-screen w-screen justify-center items-center bg-no-repeat bg-center bg-cover"
         style="background-image: url('/img/bg5.png');">
         <div
-            class="flex columns-1 w-96 bg-black border border-indigo-500 bg-opacity-10 rounded-3xl backdrop-blur-xl items-center">
-            <div class="w-s w-96 hs mx-12 my-8">
+            class="flex columns-1 w-96 h-auto bg-black border border-indigo-500 bg-opacity-10 rounded-3xl backdrop-blur-xl items-center">
+            <div class="w-s w-96 h-auto mx-12 my-8 overflow-auto">
                 <div class="flex justify-center items-center">
                     <img src="/img/logo-white.png" alt="Logo" class="w-48">
                 </div>
