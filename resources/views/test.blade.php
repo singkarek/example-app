@@ -53,7 +53,7 @@
                                 class="block text-sm mb-1 font-light font-sans leading-none text-white dark:text-white">User</label>
                             <input type="email" name="email" id="email" value="{{ old('email') }}"
                                 class="bg-slate-50 border border-gray-300 text-grey-900 text-sm rounded-lg focus:ring-darkBlue focus:border-darkBlue block w-full px-4 py-2 dark:bg-red-700 dark:border-red-600 dark:placeholder-red-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
-                                placeholder="username@gmail.com" required autocomplete="off">
+                                placeholder="username@gmail.com" required autocomplete="off" autofocus>
                         </div>
                         <div class="mb-6">
                             <label for="password"
@@ -63,7 +63,7 @@
                                 placeholder="Password" required>
                         </div>
                         <button type="submit"
-                            class="text-white font-bold bg-blue-900 hover:bg-blue-500 focus:ring-4 focus:outline-none rounded-lg text-sm w-full px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Sign
+                            class="text-white font-bold bg-dasarataDarkBlue hover:bg-dasarataDarkBlue2 focus:ring-4 focus:outline-none rounded-lg text-sm w-full px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Sign
                             in</button>
                     </div>
                 </form>
