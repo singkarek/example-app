@@ -85,4 +85,7 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 Route::get('/logins', function(){
     return view('test');
 });
+Route::get('/side', function(){
+    return view('partial.sidebar-test');
+});
 
