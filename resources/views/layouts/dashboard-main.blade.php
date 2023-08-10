@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-    <!-- Ikan apa yang abadi? I Kan't stop loving you <3 -->
+<!-- Ikan apa yang abadi? I Kan't stop loving you <3 -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +12,10 @@
 
 <body>
     @include('partial.dashboard-navbar')
-    @include('partial.sidebar')
-    <div class="items-center justify-between mx-2 md:ml-60 sm:ml-60 pt-20">
+    @include('partial.sidebar-test')
+    <div class="items-center justify-between mx-2 md:ml-60 sm:ml-60 pt-20" id="content">
         @yield('isi')
     </div>
 </body>
+
 </html>
