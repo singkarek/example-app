@@ -48,6 +48,13 @@
             display: none;
         }
 
+        .sidebar.close .logout {
+            right: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .content.close {
             margin-left: 106px;
             transition: ease-in-out 0.5s;
@@ -58,6 +65,10 @@
         }
 
         @media (max-width: 640px) {
+
+            .sidebar {
+                height: screen;
+            }
 
             .sidebar .toggle {
                 display: none;
@@ -70,6 +81,7 @@
             .content {
                 margin-left: 36px;
             }
+
         }
 
         @media (max-height:480px) {
@@ -92,7 +104,7 @@
     </button>
 
     <aside id="sidebar"
-        class="fixed sidebar trans sm:w-56 h-screen bg-dasarataSidebar top-0 left-0 z-40 shadow border border-gray-300 -translate-x-full sm:translate-x-0">
+        class="fixed sidebar close trans sm:w-56 h-screen bg-dasarataSidebar top-0 left-0 z-40 shadow border border-gray-300 -translate-x-full sm:translate-x-0">
         <div class="flex w-full items-center px-3 py-4">
             <button id="test"
                 class="flex toggle absolute trans left-52 text-white p-1 top-9 rounded-full bg-dasarataHover">
@@ -175,23 +187,23 @@
                 </ul>
             </ul>
         </div>
-        <div class="absolute flex bg-dasarataSidebar items-center w-full h-16 bottom-0 left-0 border-t">
-            <div class="flex ml-3 hov trans">
-                <img class="w-11 h-11 rounded-xl" src="/img/piggy.jpeg" alt="user photo">
+        <div class="absolute flex trans bg-dasarataSidebar items-center w-full h-16 bottom-0 left-0 border-t">
+            <div class="text trans flex">
+                <img class="w-11 h-11 text rounded-xl" src="/img/piggy.jpeg" alt="user photo">
                 <div class="w-24 text flex-row my-auto ml-2 overflow-x-auto custom-scrollbar-hidden">
                     <h2 class="font-normal text-sm whitespace-nowrap">Ryan
                         Reynolds Pandiangan Hutabarat
                     </h2>
                     <h2 class="text-xs whitespace-nowrap text-gray-600">Sales Marketing</h2>
                 </div>
-                <a href="#" class="absolute text rotate-180 bottom-5 right-4">
-                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
-                    </svg>
-                </a>
             </div>
+            <a href="#" class="absolute logout rotate-180 bottom-5 right-4">
+                <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
+                </svg>
+            </a>
         </div>
     </aside>
 
@@ -227,7 +239,7 @@
             content.classList.remove("close");
         }
     });
-    
+
     tombol.addEventListener("click", function() {
         sidebar.classList.toggle("close");
         content.classList.toggle("close");
