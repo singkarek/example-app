@@ -175,7 +175,7 @@
                 </ul>
             </ul>
         </div>
-        <div class="absolute flex bg-dasarataSidebar items-center w-full h-16 bottom-0 border-t rounded-br-lg">
+        <div class="absolute flex bg-dasarataSidebar items-center w-full h-16 bottom-0 left-0 border-t">
             <div class="flex ml-3 hov trans">
                 <img class="w-11 h-11 rounded-xl" src="/img/piggy.jpeg" alt="user photo">
                 <div class="w-24 text flex-row my-auto ml-2 overflow-x-auto custom-scrollbar-hidden">
@@ -213,23 +213,25 @@
         text = document.getElementById("text"),
         content = document.getElementById("content");
 
+    // function resizeOnWidth(){
+    //     if(window.innerWidth <= 640) {
+    //         sidebar.classList.remove("close");
+    //         sidebar.classList.remove("close");
+    //     }
+    // }
 
+    // window.addEventListener("resize", resizeOnWidth);
+    window.addEventListener("resize", function() {
+        if (window.innerWidth <= 640) {
+            sidebar.classList.remove("close");
+            content.classList.remove("close");
+        }
+    });
+    
     tombol.addEventListener("click", function() {
         sidebar.classList.toggle("close");
         content.classList.toggle("close");
     });
-
-    function toggeSideBarOnResize() {
-        if (screen.innerWidth <= 640) {
-            sidebar.classList.remove("close");
-        }else{
-            sidebar.classList.add("close");
-        }
-    }
-    window.addEventListener("DOMContentLoaded", toggleSidebarOnResize);
-
-    // Listen for window resize events
-    window.addEventListener("resize", toggleSidebarOnResize);
 </script>
 
 </html>
