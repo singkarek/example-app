@@ -2,7 +2,8 @@
 
 @section('isi')
     <h1 class="text-center">My Posts</h1>
-    <div class="relative overflow-x-auto shadow-md rounded-sm">
+    <a href="/dashboard/posts/create" class="p-2 bg-green-400 text-sm rounded-xl">Create new post</a>
+    <div class="relative overflow-x-auto mt-4 shadow-md rounded-sm">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-red-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
