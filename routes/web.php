@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
@@ -91,4 +92,6 @@ Route::get('/logins', function(){
 Route::get('/side', function(){
     return view('partial.sidebar-test');
 });
+
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('auth');
 

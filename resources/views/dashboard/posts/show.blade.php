@@ -6,15 +6,17 @@
             <div class="col-md-8">
                 <h1 class="text-3xl font-semibold">{{ $posts->title }}</h1>
                 <div class="flex flex-wrap items-center gap-2 my-4">
-                    <a href="{{ url('/dashboard/posts') }}" class="flex p-2 bg-green-400 rounded-md font-medium text-sm">
+                    <a href="{{ url('/dashboard/posts') }}"
+                        class="flex p-2 bg-green-400 hover:bg-green-500 rounded-md font-medium text-sm">
                         <svg class="w-4 h-4 my-auto mr-1 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M13 5H1m0 0 4 4M1 5l4-4" />
                         </svg>
-                        Back to My Post
+                        Back
                     </a>
-                    <a href="#" class="flex p-2 bg-yellow-400 rounded-md font-medium text-sm">
+                    <a href="/dashboard/posts/{{ $posts->slug }}/edit"
+                        class="flex p-2 bg-yellow-400 hover:bg-yellow-500 rounded-md font-medium text-sm">
                         <svg class="w-4 h-4 my-auto mr-1 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                             <path
@@ -24,17 +26,26 @@
                         </svg>
                         Edit
                     </a>
-                    <a href="#" class="flex p-2 bg-red-400 rounded-md font-medium text-sm">
-                        <svg class="w-4 h-4 my-auto mr-1 text-gray-800 dark:text-white" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                            <path
-                                d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z" />
-                        </svg>
-                        Delete
-                    </a>
+                    <form action="/dashboard/posts/{{ $posts->slug }}" method="POST">
+                        @method('delete')
+                        @csrf
+                        <button class="flex p-2 bg-red-400 hover:bg-red-500 rounded-md font-medium text-sm"
+                            onclick="return confirm('Are you sure?')">
+                            <svg class="w-4 h-4 my-auto mr-1 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                <path
+                                    d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z" />
+                            </svg>
+                            <span>Delete</span>
+                        </button>
+                    </form>
                 </div>
-                <img src="https://source.unsplash.com/800x600/?{{ $posts->category->name }}"
-                    alt="{{ $posts->category->name }}" class="img-fluid w-md">
+                @if ($posts->image)
+                <img src="{{ asset('storage/'. $posts->image) }}" alt="{{ $posts->category->name }}" class="w-full h-96">
+                @else
+                    <img src="https://source.unsplash.com/800x600/?{{ $posts->category->name }}" class="w-full h-96"
+                        alt="{{ $posts->category->name }}">
+                @endif
                 <article class="my-4">
                     {!! $posts->body !!}
                 </article>

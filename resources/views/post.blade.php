@@ -9,8 +9,15 @@
                         class="text-red-700 hover:text-red-800">{{ $posts->user->name }}</a> in <a
                         href="/blog?category={{ $posts->category->slug }}"
                         class="hover:text-red-800 text-red-700">{{ $posts->category->name }}</a></p>
-                <img src="https://source.unsplash.com/1200x600/?{{ $posts->category->name }}"
-                    alt="{{ $posts->category->name }}" class="img-fluid">
+                @if ($posts->image)
+                    <img src="{{ asset('storage/' . $posts->image) }}" alt="{{ $posts->category->name }}"
+                        class="w-full h-96">
+                @else
+                    <img src="https://source.unsplash.com/800x600/?{{ $posts->category->name }}" class="w-full h-96"
+                        alt="{{ $posts->category->name }}">
+                @endif
+                {{-- <img src="https://source.unsplash.com/1200x600/?{{ $posts->category->name }}"
+                    alt="{{ $posts->category->name }}" class="img-fluid"> --}}
                 <article class="my-4">
                     {!! $posts->body !!}
                 </article>

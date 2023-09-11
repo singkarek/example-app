@@ -36,9 +36,16 @@
         <div
             class="text-center max-w-full mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
-                <img class="rounded mx-auto mt-4"
+                @if ($posts[0]->image)
+                    <img src="{{ asset('storage/' . $posts[0]->image) }}" alt="{{ $posts[0]->category->name }}"
+                        class="rounded mx-auto mt-4">
+                @else
+                    <img src="https://source.unsplash.com/800x600/?{{ $posts[0]->category->name }}"
+                        class="rounded mx-auto mt-4" alt="{{ $posts[0]->category->name }}">
+                @endif
+                {{-- <img class="rounded mx-auto mt-4"
                     src="https://source.unsplash.com/1200x600/?{{ $posts[0]->category->name }}"
-                    alt="{{ $posts[0]->category->name }}" />
+                    alt="{{ $posts[0]->category->name }}" /> --}}
             </a>
             <div class="p-5">
                 <a href="#">
@@ -78,9 +85,16 @@
                                 <a href="/blog?category={{ $post->category->slug }}"
                                     class="absolute bg-red-800/75 text-white p-1 rounded-tl-lg">{{ $post->category->name }}</a>
                                 <a href="#">
-                                    <img class="rounded-t-lg"
+                                    @if ($post->image)
+                                        <img src="{{ asset('storage/' . $post->image) }}"
+                                            alt="{{ $post->category->name }}" class="rounded-t-lg">
+                                    @else
+                                        <img src="https://source.unsplash.com/800x600/?{{ $post->category->name }}"
+                                            class="rounded-t-lg" alt="{{ $post->category->name }}">
+                                    @endif
+                                    {{-- <img class="rounded-t-lg"
                                         src="https://source.unsplash.com/400x200/?{{ $post->category->name }}"
-                                        alt="{{ $post->category->name }}" />
+                                        alt="{{ $post->category->name }}" /> --}}
                                 </a>
                             </div>
                             <div class="p-5">

@@ -21,7 +21,7 @@
 <body>
     @include('partial.dashboard-navbar')
     @include('partial.sidebar')
-    <div class="items-center justify-between mx-2 md:ml-60 sm:ml-60 pt-20" id="content">
+    <div class="items-center justify-between mx-2 md:ml-60 sm:ml-60 pt-20 pb-2" id="content">
         @yield('isi')
     </div>
 </body>
